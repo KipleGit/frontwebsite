@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>О нас — Soundscape</title>
+  <meta name="description" content="Soundscape — интернет-магазин аудиотехники для тех, кто хочет слушать музыку лучше.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="index.html" title="На главную">
+        <img class="header__logo-img" src="images/logo.png" alt="Soundscape — на главную" width="158" height="48">
+      </a>
+      <nav class="header__nav" aria-label="Главное меню">
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог</a></li>
+          <li class="menu__item"><a class="menu__link menu__link--active" href="about.html" aria-current="page">О нас</a></li>
+          <li class="menu__item"><a class="menu__link" href="delivery.html">Доставка</a></li>
+          <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__tools">
+        <form class="search" action="products.html" method="get" role="search">
+          <input class="search__input" type="search" name="q" placeholder="Поиск по каталогу" aria-label="Поиск по каталогу">
+        </form>
+        <a class="button button--outline button--small" href="cart.html">Корзина</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li><li class="breadcrumbs__item"><span aria-current="page">О нас</span></li></ol>
+    </nav>
+    <div class="text-block">
+      <p class="eyebrow">О бренде</p>
+      <h1 class="page-title">О Soundscape</h1>
+      <p><strong>Soundscape — интернет-магазин аудиотехники для тех, кто хочет слушать музыку лучше.</strong></p>
+      <p>Помогаем выбрать технику под бюджет и задачу от первых наушников до домашнего Hi-Fi.</p>
+      <h2>Как мы работаем</h2>
+      <ul class="list">
+        <li class="list__item">Работаем только с официальными поставщиками и сервисными центрами.</li>
+        <li class="list__item">Даём возможность послушать технику в шоуруме до покупки.</li>
+        <li class="list__item">Подсказываем, что выбрать, и не навязываем лишнее.</li>
+      </ul>
+      <div class="hero__actions">
+        <a class="button" href="catalog.html">Перейти в каталог</a>
+        <a class="button button--outline" href="contacts.html">Контакты</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h2 class="footer__title">Soundscape</h2>
+          <p class="footer__text">Интернет магазин аудиотехники</p>
+          <p class="footer__text"><a class="footer__link" href="tel:+74922000000">+7 (4922) 00-00-00</a></p>
+          <p class="footer__text"><a class="footer__link" href="mailto:hello@soundscape.ru">hello@soundscape.ru</a></p>
+        </div>
+        <div class="footer__section">
+          <h2 class="footer__title">Разделы</h2>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="catalog.html">Каталог</a></li>
+            <li><a class="footer__link" href="about.html">О нас</a></li>
+            <li><a class="footer__link" href="delivery.html">Доставка</a></li>
+            <li><a class="footer__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h2 class="footer__title">Социальные сети</h2>
+          <ul class="footer__social">
+            <li><a class="footer__social-link" href="https://vk.com/" target="_blank" rel="noopener noreferrer"><img src="images/vk.png" alt="VK" width="36" height="36"></a></li>
+            <li><a class="footer__social-link" href="https://t.me/" target="_blank" rel="noopener noreferrer"><img src="images/telegram.svg" alt="Telegram" width="36" height="36"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Soundscape</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

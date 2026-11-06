@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Корзина — Soundscape</title>
+  <meta name="description" content="Корзина интернет-магазина Soundscape: товары, промокод и итоговая сумма.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/cart.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="index.html" title="На главную">
+        <img class="header__logo-img" src="images/logo.png" alt="Soundscape — на главную" width="158" height="48">
+      </a>
+      <nav class="header__nav" aria-label="Главное меню">
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог</a></li>
+          <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
+          <li class="menu__item"><a class="menu__link" href="delivery.html">Доставка</a></li>
+          <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__tools">
+        <form class="search" action="products.html" method="get" role="search">
+          <input class="search__input" type="search" name="q" placeholder="Поиск по каталогу" aria-label="Поиск по каталогу">
+        </form>
+        <a class="button button--outline button--small" href="cart.html">Корзина</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li><li class="breadcrumbs__item"><span aria-current="page">Корзина</span></li></ol>
+    </nav>
+    <h1 class="page-title">Корзина</h1>
+    <p class="page-lead" id="cart-count">2 товара</p>
+    <p class="empty-message" id="cart-empty" hidden>Корзина пуста. <a href="catalog.html">Перейти в каталог</a></p>
+    <div class="cart" id="cart-content">
+      <div>
+        <ul class="cart__list">
+          <li class="cart-item" data-price="17000">
+            <img class="cart-item__img" src="images/hd560s.svg" alt="Sennheiser HD 560S" width="72" height="72">
+            <div>
+              <h2 class="cart-item__name">Sennheiser HD 560S</h2>
+              <p class="cart-item__price">17 000 ₽</p>
+            </div>
+            <div class="qty__controls">
+              <button class="qty__button" type="button" data-step="-1" aria-label="Уменьшить количество">−</button>
+              <input class="qty__input" type="number" min="1" max="10" value="1" readonly aria-label="Количество">
+              <button class="qty__button" type="button" data-step="1" aria-label="Увеличить количество">+</button>
+            </div>
+            <button class="cart-item__remove" type="button">Удалить</button>
+          </li>
+          <li class="cart-item" data-price="1500">
+            <img class="cart-item__img" src="images/care-kit.svg" alt="Набор для ухода за винилом" width="72" height="72">
+            <div>
+              <h2 class="cart-item__name">Набор для ухода за винилом</h2>
+              <p class="cart-item__price">1 500 ₽</p>
+            </div>
+            <div class="qty__controls">
+              <button class="qty__button" type="button" data-step="-1" aria-label="Уменьшить количество">−</button>
+              <input class="qty__input" type="number" min="1" max="10" value="1" readonly aria-label="Количество">
+              <button class="qty__button" type="button" data-step="1" aria-label="Увеличить количество">+</button>
+            </div>
+            <button class="cart-item__remove" type="button">Удалить</button>
+          </li>
+        </ul>
+        <form class="promo" id="promo-form">
+          <label class="promo__label" for="promo-code">Промокод</label>
+          <input class="form__input" id="promo-code" type="text" placeholder="Введите код" style="max-width: 220px">
+          <button class="button button--outline button--small" type="submit">Применить</button>
+          <p class="promo__message" id="promo-message"></p>
+        </form>
+        <a class="back-link" href="catalog.html">← Продолжить покупки</a>
+      </div>
+      <aside class="summary" aria-label="Итого">
+        <h2 class="summary__title">Итого</h2>
+        <div class="summary__row"><span>Товары</span><span id="summary-goods">18 500 ₽</span></div>
+        <div class="summary__row"><span>Доставка</span><span id="summary-delivery">Бесплатно</span></div>
+        <div class="summary__row" id="discount-row" hidden><span>Скидка</span><span id="summary-discount">−0 ₽</span></div>
+        <div class="summary__row summary__row--total"><span>Итого</span><span id="summary-total">18 500 ₽</span></div>
+        <a class="button button--wide" href="checkout.html">Оформить заказ</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h2 class="footer__title">Soundscape</h2>
+          <p class="footer__text">Интернет магазин аудиотехники</p>
+          <p class="footer__text"><a class="footer__link" href="tel:+74922000000">+7 (4922) 00-00-00</a></p>
+          <p class="footer__text"><a class="footer__link" href="mailto:hello@soundscape.ru">hello@soundscape.ru</a></p>
+        </div>
+        <div class="footer__section">
+          <h2 class="footer__title">Разделы</h2>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="catalog.html">Каталог</a></li>
+            <li><a class="footer__link" href="about.html">О нас</a></li>
+            <li><a class="footer__link" href="delivery.html">Доставка</a></li>
+            <li><a class="footer__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h2 class="footer__title">Социальные сети</h2>
+          <ul class="footer__social">
+            <li><a class="footer__social-link" href="https://vk.com/" target="_blank" rel="noopener noreferrer"><img src="images/vk.png" alt="VK" width="36" height="36"></a></li>
+            <li><a class="footer__social-link" href="https://t.me/" target="_blank" rel="noopener noreferrer"><img src="images/telegram.svg" alt="Telegram" width="36" height="36"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Soundscape</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

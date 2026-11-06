@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Оформление заказа — Soundscape</title>
+  <meta name="description" content="Оформление заказа в интернет-магазине Soundscape.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/forms.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="index.html" title="На главную">
+        <img class="header__logo-img" src="images/logo.png" alt="Soundscape — на главную" width="158" height="48">
+      </a>
+      <nav class="header__nav" aria-label="Главное меню">
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог</a></li>
+          <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
+          <li class="menu__item"><a class="menu__link" href="delivery.html">Доставка</a></li>
+          <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__tools">
+        <form class="search" action="products.html" method="get" role="search">
+          <input class="search__input" type="search" name="q" placeholder="Поиск по каталогу" aria-label="Поиск по каталогу">
+        </form>
+        <a class="button button--outline button--small" href="cart.html">Корзина</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="cart.html">Корзина</a></li><li class="breadcrumbs__item"><span aria-current="page">Оформление заказа</span></li></ol>
+    </nav>
+    <h1 class="page-title">Оформление заказа</h1>
+    <p class="page-lead">Заполните данные, и мы свяжемся с вами для подтверждения.</p>
+    <div class="cart">
+      <form class="form" novalidate>
+        <div class="form__field">
+          <label class="form__label" for="order-name">Имя и фамилия</label>
+          <input class="form__input" id="order-name" name="name" type="text" required minlength="2" autocomplete="name">
+          <p class="form__error" id="order-name-error"></p>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="order-phone">Телефон</label>
+          <input class="form__input" id="order-phone" name="phone" type="tel" required pattern="[0-9+ \(\)\-]{10,18}" placeholder="+7 (900) 000-00-00" autocomplete="tel">
+          <p class="form__error" id="order-phone-error"></p>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="order-email">E-mail</label>
+          <input class="form__input" id="order-email" name="email" type="email" required placeholder="name@example.ru" autocomplete="email">
+          <p class="form__error" id="order-email-error"></p>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="delivery">Способ получения</label>
+          <select class="form__select" id="delivery" name="delivery" required>
+            <option value="">Выберите способ</option>
+            <option value="pickup">Самовывоз из шоурума</option>
+            <option value="courier">Курьер по Владимиру</option>
+            <option value="post">ПВЗ или почта</option>
+          </select>
+          <p class="form__error" id="delivery-error"></p>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="address">Адрес доставки</label>
+          <input class="form__input" id="address" name="address" type="text" required minlength="5" placeholder="Город, улица, дом, квартира" autocomplete="address-line1">
+          <p class="form__error" id="address-error"></p>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="order-comment">Комментарий к заказу</label>
+          <textarea class="form__textarea" id="order-comment" name="comment"></textarea>
+          <p class="form__error" id="order-comment-error"></p>
+        </div>
+        <div class="form__field">
+          <label class="form__check" for="order-agree"><input id="order-agree" name="agree" type="checkbox" required> Согласен на обработку персональных данных</label>
+          <p class="form__error" id="order-agree-error"></p>
+        </div>
+        <button class="button" type="submit">Подтвердить заказ</button>
+        <p class="form__success" hidden>Спасибо! Заказ принят, мы скоро свяжемся с вами.</p>
+      </form>
+      <aside class="summary" aria-label="Ваш заказ">
+        <h2 class="summary__title">Ваш заказ</h2>
+        <div class="summary__row"><span>Sennheiser HD 560S</span><span>17 000 ₽</span></div>
+        <div class="summary__row"><span>Набор для ухода за винилом</span><span>1 500 ₽</span></div>
+        <div class="summary__row"><span>Доставка</span><span>Бесплатно</span></div>
+        <div class="summary__row summary__row--total"><span>Итого</span><span>18 500 ₽</span></div>
+        <a class="back-link" href="cart.html">← Вернуться в корзину</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h2 class="footer__title">Soundscape</h2>
+          <p class="footer__text">Интернет магазин аудиотехники</p>
+          <p class="footer__text"><a class="footer__link" href="tel:+74922000000">+7 (4922) 00-00-00</a></p>
+          <p class="footer__text"><a class="footer__link" href="mailto:hello@soundscape.ru">hello@soundscape.ru</a></p>
+        </div>
+        <div class="footer__section">
+          <h2 class="footer__title">Разделы</h2>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="catalog.html">Каталог</a></li>
+            <li><a class="footer__link" href="about.html">О нас</a></li>
+            <li><a class="footer__link" href="delivery.html">Доставка</a></li>
+            <li><a class="footer__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h2 class="footer__title">Социальные сети</h2>
+          <ul class="footer__social">
+            <li><a class="footer__social-link" href="https://vk.com/" target="_blank" rel="noopener noreferrer"><img src="images/vk.png" alt="VK" width="36" height="36"></a></li>
+            <li><a class="footer__social-link" href="https://t.me/" target="_blank" rel="noopener noreferrer"><img src="images/telegram.svg" alt="Telegram" width="36" height="36"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Soundscape</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

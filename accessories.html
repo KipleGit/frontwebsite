@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аксессуары — каталог Soundscape</title>
+  <meta name="description" content="Аксессуары: цены, характеристики и наличие в магазине Soundscape.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/catalog.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="index.html" title="На главную">
+        <img class="header__logo-img" src="images/logo.png" alt="Soundscape — на главную" width="158" height="48">
+      </a>
+      <nav class="header__nav" aria-label="Главное меню">
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link menu__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
+          <li class="menu__item"><a class="menu__link" href="delivery.html">Доставка</a></li>
+          <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__tools">
+        <form class="search" action="products.html" method="get" role="search">
+          <input class="search__input" type="search" name="q" placeholder="Поиск по каталогу" aria-label="Поиск по каталогу">
+        </form>
+        <a class="button button--outline button--small" href="cart.html">Корзина</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a></li><li class="breadcrumbs__item"><span aria-current="page">Аксессуары</span></li></ol>
+    </nav>
+    <h1 class="page-title">Аксессуары</h1>
+    <div class="catalog">
+      <form class="filters" aria-label="Фильтры каталога">
+        <h2 class="filters__title">Фильтры</h2>
+        <fieldset class="filters__group">
+          <legend class="filters__legend">Цена, ₽</legend>
+          <div class="filters__price">
+            <input class="form__input" type="number" name="priceMin" min="0" placeholder="От" aria-label="Цена от">
+            <input class="form__input" type="number" name="priceMax" min="0" placeholder="До" aria-label="Цена до">
+          </div>
+        </fieldset>
+        <div class="filters__actions">
+          <button class="button button--wide" type="submit">Применить</button>
+          <button class="button button--outline" type="reset">Сбросить</button>
+        </div>
+      </form>
+
+      <section aria-label="Список товаров">
+        <div class="toolbar">
+          <p class="toolbar__found" id="found-count">Найдено: 7</p>
+          <div class="sort">
+            <label class="sort__label" for="sort">Сортировка:</label>
+            <select class="sort__select" id="sort" name="sort">
+              <option value="popular">По популярности</option>
+              <option value="price-asc">Сначала дешёвые</option>
+              <option value="price-desc">Сначала дорогие</option>
+            </select>
+          </div>
+        </div>
+        <ul class="product-list">
+          <li class="product-card" style="--i:0" data-name="Набор для ухода за винилом" data-brand="soundscape" data-price="1500" data-popularity="9" data-wireless="no">
+            <img class="product-card__img" src="images/care-kit.svg" alt="Набор для ухода за винилом" width="600" height="450">
+            <h2 class="product-card__name"><a class="product-card__link" href="product-care-kit.html">Набор для ухода за винилом</a></h2>
+            <p class="product-card__meta">Для чистки пластинок</p>
+            <p class="product-card__price">от 1 500 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__buy" href="cart.html">Купить</a>
+            </div>
+          </li>
+          <li class="product-card" style="--i:1" data-name="Межблочный кабель RCA" data-brand="soundscape" data-price="1200" data-popularity="8" data-wireless="no">
+            <img class="product-card__img" src="images/rca.svg" alt="Межблочный кабель RCA" width="600" height="450">
+            <h2 class="product-card__name"><a class="product-card__link" href="product-rca.html">Межблочный кабель RCA</a></h2>
+            <p class="product-card__meta">Разъёмы: RCA–RCA</p>
+            <p class="product-card__price">от 1 200 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__buy" href="cart.html">Купить</a>
+            </div>
+          </li>
+          <li class="product-card" style="--i:2" data-name="Футляр для наушников" data-brand="soundscape" data-price="1800" data-popularity="7" data-wireless="no">
+            <img class="product-card__img" src="images/case.svg" alt="Футляр для наушников" width="600" height="450">
+            <h2 class="product-card__name"><a class="product-card__link" href="product-case.html">Футляр для наушников</a></h2>
+            <p class="product-card__meta">Жёсткий, на молнии</p>
+            <p class="product-card__price">от 1 800 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__buy" href="cart.html">Купить</a>
+            </div>
+          </li>
+          <li class="product-card" style="--i:3" data-name="Игла Audio-Technica ATN3600L" data-brand="audio-technica" data-price="2500" data-popularity="6" data-wireless="no">
+            <img class="product-card__img" src="images/stylus.svg" alt="Игла Audio-Technica ATN3600L" width="600" height="450">
+            <h2 class="product-card__name"><a class="product-card__link" href="product-stylus.html">Игла Audio-Technica ATN3600L</a></h2>
+            <p class="product-card__meta">Сменная игла</p>
+            <p class="product-card__price">от 2 500 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__buy" href="cart.html">Купить</a>
+            </div>
+          </li>
+          <li class="product-card" style="--i:4" data-name="Переходник 3.5 → 6.3 мм" data-brand="soundscape" data-price="600" data-popularity="5" data-wireless="no">
+            <img class="product-card__img" src="images/adapter.svg" alt="Переходник 3.5 → 6.3 мм" width="600" height="450">
+            <h2 class="product-card__name"><a class="product-card__link" href="product-adapter.html">Переходник 3.5 → 6.3 мм</a></h2>
+            <p class="product-card__meta">Разъёмы: 3.5 → 6.3 мм</p>
+            <p class="product-card__price">от 600 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__buy" href="cart.html">Купить</a>
+            </div>
+          </li>
+          <li class="product-card" style="--i:5" data-name="Кабель USB-C" data-brand="soundscape" data-price="700" data-popularity="4" data-wireless="no">
+            <img class="product-card__img" src="images/usbc.svg" alt="Кабель USB-C" width="600" height="450">
+            <h2 class="product-card__name"><a class="product-card__link" href="product-usbc.html">Кабель USB-C</a></h2>
+            <p class="product-card__meta">Длина: 1 м</p>
+            <p class="product-card__price">от 700 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__buy" href="cart.html">Купить</a>
+            </div>
+          </li>
+          <li class="product-card" style="--i:6" data-name="Сменные амбушюры" data-brand="soundscape" data-price="2500" data-popularity="3" data-wireless="no">
+            <img class="product-card__img" src="images/earpads.svg" alt="Сменные амбушюры" width="600" height="450">
+            <h2 class="product-card__name"><a class="product-card__link" href="product-earpads.html">Сменные амбушюры</a></h2>
+            <p class="product-card__meta">Комплект: 2 шт.</p>
+            <p class="product-card__price">от 2 500 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__buy" href="cart.html">Купить</a>
+            </div>
+          </li>
+        </ul>
+        <p class="empty-message" id="empty-message" hidden>По вашему запросу ничего не найдено. Измените фильтры или нажмите «Сбросить».</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h2 class="footer__title">Soundscape</h2>
+          <p class="footer__text">Интернет магазин аудиотехники</p>
+          <p class="footer__text"><a class="footer__link" href="tel:+74922000000">+7 (4922) 00-00-00</a></p>
+          <p class="footer__text"><a class="footer__link" href="mailto:hello@soundscape.ru">hello@soundscape.ru</a></p>
+        </div>
+        <div class="footer__section">
+          <h2 class="footer__title">Разделы</h2>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="catalog.html">Каталог</a></li>
+            <li><a class="footer__link" href="about.html">О нас</a></li>
+            <li><a class="footer__link" href="delivery.html">Доставка</a></li>
+            <li><a class="footer__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h2 class="footer__title">Социальные сети</h2>
+          <ul class="footer__social">
+            <li><a class="footer__social-link" href="https://vk.com/" target="_blank" rel="noopener noreferrer"><img src="images/vk.png" alt="VK" width="36" height="36"></a></li>
+            <li><a class="footer__social-link" href="https://t.me/" target="_blank" rel="noopener noreferrer"><img src="images/telegram.svg" alt="Telegram" width="36" height="36"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Soundscape</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

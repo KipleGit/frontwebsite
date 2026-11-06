@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Наушники — каталог Soundscape</title>
+  <meta name="description" content="Наушники: цены, характеристики и наличие в магазине Soundscape.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/catalog.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="index.html" title="На главную">
+        <img class="header__logo-img" src="images/logo.png" alt="Soundscape — на главную" width="158" height="48">
+      </a>
+      <nav class="header__nav" aria-label="Главное меню">
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link menu__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
+          <li class="menu__item"><a class="menu__link" href="delivery.html">Доставка</a></li>
+          <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__tools">
+        <form class="search" action="products.html" method="get" role="search">
+          <input class="search__input" type="search" name="q" placeholder="Поиск по каталогу" aria-label="Поиск по каталогу">
+        </form>
+        <a class="button button--outline button--small" href="cart.html">Корзина</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list"><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a></li><li class="breadcrumbs__item"><span aria-current="page">Наушники</span></li></ol>
+    </nav>
+    <h1 class="page-title">Наушники</h1>
+    <div class="catalog">
+      <form class="filters" aria-label="Фильтры каталога">
+        <h2 class="filters__title">Фильтры</h2>
+        <fieldset class="filters__group">
+          <legend class="filters__legend">Цена, ₽</legend>
+          <div class="filters__price">
+            <input class="form__input" type="number" name="priceMin" min="0" placeholder="От" aria-label="Цена от">
+            <input class="form__input" type="number" name="priceMax" min="0" placeholder="До" aria-label="Цена до">
+          </div>
+        </fieldset>
+        <fieldset class="filters__group">
+          <legend class="filters__legend">Бренд</legend>
+          <label class="filters__option"><input type="checkbox" name="brand" value="akg"> AKG</label>
+          <label class="filters__option"><input type="checkbox" name="brand" value="audio-technica"> Audio-Technica</label>
+          <label class="filters__option"><input type="checkbox" name="brand" value="marshall"> Marshall</label>
+          <label class="filters__option"><input type="checkbox" name="brand" value="sennheiser"> Sennheiser</label>
+          <label class="filters__option"><input type="checkbox" name="brand" value="sony"> Sony</label>
+        </fieldset>
+        <fieldset class="filters__group">
+          <legend class="filters__legend">Тип подключения</legend>
+          <label class="filters__option"><input type="radio" name="connection" value="any" checked> Любое</label>
+          <label class="filters__option"><input type="radio" name="connection" value="wired"> Проводное</label>
+          <label class="filters__option"><input type="radio" name="connection" value="wireless"> Беспроводное</label>
+        </fieldset>
+        <div class="filters__actions">
+          <button class="button button--wide" type="submit">Применить</button>
+          <button class="button button--outline" type="reset">Сбросить</button>
+        </div>
+      </form>
+
+      <section aria-label="Список товаров">
+        <div class="toolbar">
+          <p class="toolbar__found" id="found-count">Найдено: 7</p>
+          <div class="sort">
+            <label class="sort__label" for="sort">Сортировка:</label>
+            <select class="sort__select" id="sort" name="sort">
+              <option value="popular">По популярности</option>
+              <option value="price-asc">Сначала дешёвые</option>
+              <option value="price-desc">Сначала дорогие</option>
+              <option value="year-desc">Сначала новые</option>
+            </select>
+          </div>
+        </div>
+        <ul class="product-list">
+          <li class="product-card" style="--i:0" data-name="Sennheiser HD 560S" data-brand="sennheiser" data-price="17000" data-year="2020" data-popularity="9" data-wireless="no">
+            <img class="product-card__img" src="images/hd560s.svg" alt="Sennheiser HD 560S" width="600" height="450">
+            <h2 class="product-card__name"><a class="product-card__link" href="product-hd560s.html">Sennheiser HD 560S</a></h2>
+            <p class="product-card__meta">Год выпуска: 2020</p>
+            <p class="product-card__price">от 17 000 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__buy" href="cart.html">Купить</a>
+            </div>
+          </li>
+          <li class="product-card" style="--i:1" data-name="Sony WH-1000XM5" data-brand="sony" data-price="30000" data-year="2022" data-popularity="8" data-wireless="yes">
+            <img class="product-card__img" src="images/wh1000xm5.svg" alt="Sony WH-1000XM5" width="600" height="450">
+            <h2 class="product-card__name"><a class="product-card__link" href="product-wh1000xm5.html">Sony WH-1000XM5</a></h2>
+            <p class="product-card__meta">Год выпуска: 2022</p>
+            <p class="product-card__price">от 30 000 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__buy" href="cart.html">Купить</a>
+            </div>
+          </li>
+          <li class="product-card" style="--i:2" data-name="Audio-Technica ATH-M50x" data-brand="audio-technica" data-price="13000" data-year="2014" data-popularity="7" data-wireless="no">
+            <img class="product-card__img" src="images/ath-m50x.svg" alt="Audio-Technica ATH-M50x" width="600" height="450">
+            <h2 class="product-card__name"><a class="product-card__link" href="product-ath-m50x.html">Audio-Technica ATH-M50x</a></h2>
+            <p class="product-card__meta">Год выпуска: 2014</p>
+            <p class="product-card__price">от 13 000 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__buy" href="cart.html">Купить</a>
+            </div>
+          </li>
+          <li class="product-card" style="--i:3" data-name="Sennheiser Momentum 4 Wireless" data-brand="sennheiser" data-price="28000" data-year="2022" data-popularity="6" data-wireless="yes">
+            <img class="product-card__img" src="images/momentum4.svg" alt="Sennheiser Momentum 4 Wireless" width="600" height="450">
+            <h2 class="product-card__name"><a class="product-card__link" href="product-momentum4.html">Sennheiser Momentum 4 Wireless</a></h2>
+            <p class="product-card__meta">Год выпуска: 2022</p>
+            <p class="product-card__price">от 28 000 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__buy" href="cart.html">Купить</a>
+            </div>
+          </li>
+          <li class="product-card" style="--i:4" data-name="AKG K371" data-brand="akg" data-price="11000" data-year="2019" data-popularity="5" data-wireless="no">
+            <img class="product-card__img" src="images/akg-k371.svg" alt="AKG K371" width="600" height="450">
+            <h2 class="product-card__name"><a class="product-card__link" href="product-akg-k371.html">AKG K371</a></h2>
+            <p class="product-card__meta">Год выпуска: 2019</p>
+            <p class="product-card__price">от 11 000 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__buy" href="cart.html">Купить</a>
+            </div>
+          </li>
+          <li class="product-card" style="--i:5" data-name="Sony WH-CH720N" data-brand="sony" data-price="9000" data-year="2023" data-popularity="4" data-wireless="yes">
+            <img class="product-card__img" src="images/wh-ch720n.svg" alt="Sony WH-CH720N" width="600" height="450">
+            <h2 class="product-card__name"><a class="product-card__link" href="product-wh-ch720n.html">Sony WH-CH720N</a></h2>
+            <p class="product-card__meta">Год выпуска: 2023</p>
+            <p class="product-card__price">от 9 000 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__buy" href="cart.html">Купить</a>
+            </div>
+          </li>
+          <li class="product-card" style="--i:6" data-name="Marshall Major IV" data-brand="marshall" data-price="8000" data-year="2018" data-popularity="3" data-wireless="yes">
+            <img class="product-card__img" src="images/major4.svg" alt="Marshall Major IV" width="600" height="450">
+            <h2 class="product-card__name"><a class="product-card__link" href="product-major4.html">Marshall Major IV</a></h2>
+            <p class="product-card__meta">Год выпуска: 2018</p>
+            <p class="product-card__price">от 8 000 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__buy" href="cart.html">Купить</a>
+            </div>
+          </li>
+        </ul>
+        <p class="empty-message" id="empty-message" hidden>По вашему запросу ничего не найдено. Измените фильтры или нажмите «Сбросить».</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h2 class="footer__title">Soundscape</h2>
+          <p class="footer__text">Интернет магазин аудиотехники</p>
+          <p class="footer__text"><a class="footer__link" href="tel:+74922000000">+7 (4922) 00-00-00</a></p>
+          <p class="footer__text"><a class="footer__link" href="mailto:hello@soundscape.ru">hello@soundscape.ru</a></p>
+        </div>
+        <div class="footer__section">
+          <h2 class="footer__title">Разделы</h2>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="catalog.html">Каталог</a></li>
+            <li><a class="footer__link" href="about.html">О нас</a></li>
+            <li><a class="footer__link" href="delivery.html">Доставка</a></li>
+            <li><a class="footer__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__section">
+          <h2 class="footer__title">Социальные сети</h2>
+          <ul class="footer__social">
+            <li><a class="footer__social-link" href="https://vk.com/" target="_blank" rel="noopener noreferrer"><img src="images/vk.png" alt="VK" width="36" height="36"></a></li>
+            <li><a class="footer__social-link" href="https://t.me/" target="_blank" rel="noopener noreferrer"><img src="images/telegram.svg" alt="Telegram" width="36" height="36"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Soundscape</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
